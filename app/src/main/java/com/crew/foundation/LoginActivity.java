@@ -20,6 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class LoginActivity extends AppCompatActivity {
 
     Button loginBtn;
+    Button signupBtn;
     TextInputEditText usernameET;
     TextInputEditText passwordET;
     DatabaseReference mDatabase;
@@ -32,9 +33,20 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.loginbutton);
         usernameET = findViewById(R.id.login_username);
         passwordET = findViewById(R.id.login_password);
+        signupBtn = findViewById(R.id.signupbutton);
         view = findViewById(android.R.id.content);
         //snackbar buat error login
         final Snackbar errorSnackbar = Snackbar.make(view,"Username atau Password salah",2000);
+
+        //jika sign up button ditekan
+        signupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, signupactivity.class);
+                startActivity(intent);
+                return;
+            }
+        });
 
         //jika login button ditekan
         loginBtn.setOnClickListener(new View.OnClickListener() {
