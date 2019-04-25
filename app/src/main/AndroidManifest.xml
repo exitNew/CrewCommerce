@@ -16,12 +16,15 @@
         tools:replace="android:appComponentFactory">
         <activity
             android:name=".signupactivity"
-            android:theme="@style/login"></activity>
+            android:theme="@style/login" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/login"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".EditInfoActivity" />
         <activity android:name=".DetailActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".splashActivity"
             android:theme="@style/login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

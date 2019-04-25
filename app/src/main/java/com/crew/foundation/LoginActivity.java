@@ -68,6 +68,8 @@ public class LoginActivity extends AppCompatActivity {
                             String password_check = snapshot.child("password").getValue(String.class);
                             if (username.equals(username_check) && password.equals(password_check) ){
                                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                                //kirim username untuk jd seperti session key?
+                                intent.putExtra("username",username);
                                 startActivity(intent);
                                 //butuh return agar snackbar tidak muncul jika berhasil login
                                 return;

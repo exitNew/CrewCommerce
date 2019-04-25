@@ -68,8 +68,8 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Log.d("THIS", "masuk");
-                String username = dataSnapshot.child("users").child("0").child("username").getValue(String.class);
-                String password = dataSnapshot.child("users").child("0").child("password").getValue(String.class);
+                String username = dataSnapshot.child("users").child("-LdBwPfXep70g-zIjNRL").child("username").getValue(String.class);
+                String password = dataSnapshot.child("users").child("-LdBwPfXep70g-zIjNRL").child("password").getValue(String.class);
                 Log.d("THIS", username);
                 title.setText(username);
                 subtitle.setText(password);
